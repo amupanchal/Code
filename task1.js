@@ -54,10 +54,10 @@ for (let j = 0; j < ageArray.length; j++) {
 
 for (let k = 1; k < ageArray.length; k++) {
     for (let l = 0; l < k; l++) {
-        if (myArray[k] > myArray[l]) {
-            let temp = myArray[l]
-            myArray[l] = myArray[k]
-            myArray[i] = temp
+        if (ageArray[k] > ageArray[l]) {
+            let temp = ageArray[l]
+            ageArray[l] = ageArray[k]
+            ageArray[k] = temp
         }
     }
 }
@@ -66,12 +66,10 @@ let nameArr = array.map((pri,index)=>{
     return pri.name
 })
 
- console.log(nameArr);
- console.log('Total Sum of Array is ' + sum);
- console.log('Sorted Array ' + ageArray);
- console.log('Sorted Array ' + nameArray.sort().reverse());
- console.log('Max Age ' + Math.max(...ageArray));
- console.log('Min Age ' + Math.min(...ageArray));
+console.log('Max Age ' + Math.max(...ageArray));
+console.log('Min Age ' + Math.min(...ageArray));
+console.log('Total Sum of Array is ' + sum);
+console.log('Sorted Array ' + nameArray.sort().reverse());
 
 // 4. Input - [{ age: 15, name: "abc" }, { age: 50, name: "xyz" }..... add more sample data of 5 10 elements]
 // Output - [15, 50, ......]
