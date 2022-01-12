@@ -2,17 +2,17 @@
 // Output - N-3, E - 1, o -3 .... and so on.....
 
 let str = "Neoquant solution";
-let str2 = str.toLowerCase();
-str2.replace(/\s/g, '')
+let lowStr = str.toLowerCase();
+lowStr.replace(/\s/g, '')
 let result ={}
-for (var i = 0; i < str2.length; i++) {
-  if (result[str2[i]]) {
-    result[str2[i]] += result[str2[i]]
-  }else{
-    result[str2[i]] = 1
-  }
+for (let i = 0; i < lowStr.length; i++) {
+    if (result[lowStr[i]]) {
+        result[lowStr[i]]++
+    }else{
+        result[lowStr[i]]=1
+    }
 }
-console.log (result)
+console.log(result);
 
 // 2. Input - "Neoquant Solutions"
 // Output - "snoituloS tnauqoeN"
