@@ -12,7 +12,7 @@ for (var i = 0; i < str2.length; i++) {
     result[str2[i]] = 1
   }
 }
-// console.log (result)
+console.log (result)
 
 // 2. Input - "Neoquant Solutions"
 // Output - "snoituloS tnauqoeN"
@@ -22,12 +22,12 @@ let result = " "
 for (let i = str.length - 1; i >= 0; i--) {
      result+=str[i]
 }
-// console.log(result);
+ console.log(result);
 
 let splitStr = str.split("")
 let revStr = splitStr.reverse()
 let result  = revStr.join("")
-// console.log(result);
+ console.log(result);
 
 // 3. Input - [{ age: 15, name: "abc" }, { age: 50, name: "xyz" }..... add more sample data of 5 10 elements]
 // Output:
@@ -52,16 +52,12 @@ for (let j = 0; j < ageArray.length; j++) {
     sum += ageArray[j]
 }
 
-for (let j = 1; j < ageArray.length; j++) {
-    let right = ageArray[j]
-    for (let k = 0; k < j; k++) {
-        let left = array[k];
-        if (right > left) {
-            let temp = ageArray[j+1]
-            ageArray[j+1] = ageArray[k]
-            ageArray[k] = temp
-        }else{
-            break
+for (let k = 1; k < ageArray.length; k++) {
+    for (let l = 0; l < k; l++) {
+        if (myArray[k] > myArray[l]) {
+            let temp = myArray[l]
+            myArray[l] = myArray[k]
+            myArray[i] = temp
         }
     }
 }
@@ -70,12 +66,12 @@ let nameArr = array.map((pri,index)=>{
     return pri.name
 })
 
-// console.log(nameArr);
-// console.log('Total Sum of Array is ' + sum);
-// console.log('Sorted Array ' + ageArray);
-// console.log('Sorted Array ' + nameArray.sort().reverse());
-// console.log('Max Age ' + Math.max(...ageArray));
-// console.log('Min Age ' + Math.min(...ageArray));
+ console.log(nameArr);
+ console.log('Total Sum of Array is ' + sum);
+ console.log('Sorted Array ' + ageArray);
+ console.log('Sorted Array ' + nameArray.sort().reverse());
+ console.log('Max Age ' + Math.max(...ageArray));
+ console.log('Min Age ' + Math.min(...ageArray));
 
 // 4. Input - [{ age: 15, name: "abc" }, { age: 50, name: "xyz" }..... add more sample data of 5 10 elements]
 // Output - [15, 50, ......]
@@ -93,8 +89,3 @@ for (let i = 0; i < array2.length; i++) {
 }
 
 console.log(ageArray2,nameArray2);
-
-// let result = array.map((value,index)=>{
-//     return value.age
-// })
-// console.log(result);
